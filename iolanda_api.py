@@ -24,7 +24,7 @@ def cadastrar():
         "nome": data['nome'],
         "email": email,
         "senha": generate_password_hash(data['senha']),
-        "observatorio": data['observatorio']
+        "username": data['username']   # novo campo
     }
     
     usuarios_collection.insert_one(novo_usuario)
@@ -39,7 +39,7 @@ def login():
     usuario = usuarios_collection.find_one({"email": email})
     
     if usuario and check_password_hash(usuario['senha'], senha):
-        return jsonify({"status": "ok", "mensagem": "Login bem-sucedido", "nome": usuario["nome"], "observatorio": usuario["observatorio"]})
+        return jsonify({"status": "ok", "mensagem": "Login bem-sucedido", "nome": usuario["nome"], "username": usuario["username"]})
     else:
         return jsonify({"status": "erro", "mensagem": "Email ou senha incorretos"}), 401
     
