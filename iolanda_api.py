@@ -2,19 +2,13 @@ from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
-import os  # Adicionando a importação do módulo os para acessar variáveis de ambiente
 
 
 app = Flask(__name__)
 CORS(app)
 
-# Conexão com MongoDB Atlas - usando a variável de ambiente MONGO_URI
-mongo_uri = os.getenv("MONGO_URI")  # Lê a variável de ambiente MONGO_URI
-
-if not mongo_uri:
-    raise ValueError("A variável de ambiente MONGO_URI não está definida!")  # Caso a variável não esteja definida
-
-client = MongoClient(mongo_uri)  # Conecta-se ao MongoDB usando a URI da variável de ambiente
+# Conexão com MongoDB Atlas
+client = MongoClient("mongodb+srv://AlunoUnivap:projetoiolanda@iolanda-cluster.otillni.mongodb.net/?retryWrites=true&w=majority&appName=iolanda-cluster")
 db = client['iolanda_db']
 usuarios_collection = db['usuarios']
 observatorios_collection = db['observatorios']
@@ -123,6 +117,7 @@ def deletar_observatorio(nome):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
