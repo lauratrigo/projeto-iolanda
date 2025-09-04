@@ -23,6 +23,10 @@ observatorios_collection = db['observatorios']
 def cadastrar():
     data = request.json
     email = data['email']
+
+    # Verifique se o username já existe
+    if usuarios_collection.find_one({"username": username}):
+        return jsonify({"status": "erro", "mensagem": "Nome de usuário já existe"}), 400
     
     if usuarios_collection.find_one({"email": email}):
         return jsonify({"status": "erro", "mensagem": "Usuário já existe"}), 400
@@ -116,5 +120,6 @@ def deletar_observatorio(nome):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
 
