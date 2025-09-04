@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
+import os  # Adicionando a importação do módulo os para acessar variáveis de ambiente
+
 
 app = Flask(__name__)
 CORS(app)
@@ -114,4 +116,5 @@ def deletar_observatorio(nome):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
