@@ -115,8 +115,13 @@ def deletar_observatorio(nome):
     else:
         return jsonify({"status": "erro", "mensagem": "Observatório não encontrado"}), 404
 
+@app.route('/')
+def home():
+    return jsonify({"mensagem": "API está no ar!"})
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
