@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Conexão com MongoDB Atlas
-client = MongoClient("mongodb+srv://AlunoUnivap:projeto-iolanda@iolanda-cluster.otillni.mongodb.net/?retryWrites=true&w=majority&appName=iolanda-cluster")
+client = MongoClient("mongodb+srv://aluno_univap:projeto-iolanda@iolanda-cluster.ids2wog.mongodb.net/?retryWrites=true&w=majority&appName=iolanda-cluster")
 db = client['iolanda_db']
 usuarios_collection = db['usuarios']
 observatorios_collection = db['observatorios']
@@ -117,6 +117,7 @@ def deletar_observatorio(nome):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
