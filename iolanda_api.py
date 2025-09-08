@@ -115,12 +115,22 @@ def deletar_observatorio(nome):
     else:
         return jsonify({"status": "erro", "mensagem": "Observatório não encontrado"}), 404
 
+
+@app.route('/observatorios', methods=['GET'])
+def listar_observatorios():
+    observatorios = list(observatorios_collection.find())
+    for o in observatorios:
+        o['_id'] = str(o['_id'])  # Converte ObjectId para string (evita erro de JSON no MATLAB)
+    return jsonify(observatorios)
+
+
 @app.route('/')
 def home():
     return jsonify({"mensagem": "API está no ar!"})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
