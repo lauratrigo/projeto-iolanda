@@ -129,10 +129,9 @@ def listar_observatorios():
 @app.route('/omni/download', methods=['POST'])
 def baixar_omni():
     data = request.json
-    ano = str(data.get('ano'))           # ex: 2017
-    resolucao = data.get('resolucao')    # ex: '5min', '1min', '1hour'
+    ano = data.get('ano')
+    resolucao = data.get('resolucao')
 
-    # Mapear resolução para pasta
     pasta_res = {
         "1min": "omni_min",
         "5min": "omni_5min",
@@ -140,20 +139,20 @@ def baixar_omni():
     }
 
     if resolucao not in pasta_res:
-        return jsonify({"status": "erro", "mensagem": "Resolução não suportada"}), 400
+        return jsonify({"status":"erro", "mensagem":"Resolução inválida"}), 400
 
     url = f"https://cdaweb.gsfc.nasa.gov/pub/data/omni/{pasta_res[resolucao]}/{pasta_res[resolucao]}_{ano}.txt"
 
     import requests
     try:
-        r = requests.get(url, verify=False)  # SSL ignorado
+        r = requests.get(url, verify=False)
         if r.status_code != 200:
-            return jsonify({"status": "erro", "mensagem": "Arquivo não encontrado"}), 404
+            return jsonify({"status":"erro","mensagem":"Arquivo não encontrado"}), 404
     except Exception as e:
-        return jsonify({"status": "erro", "mensagem": str(e)}), 500
+        return jsonify({"status":"erro","mensagem":str(e)}), 500
 
-    # Retorna o conteúdo do arquivo
     return r.text
+
 
 
 
@@ -164,6 +163,7 @@ def home():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
