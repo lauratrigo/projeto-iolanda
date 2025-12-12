@@ -1,0 +1,47 @@
+/* Corpo da página: centraliza conteúdo vertical e horizontal */
+body {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Alice", serif;
+}
+
+/* Container geral do logo e textos */
+.logo-container {
+  text-align: center;
+  max-width: 90%;
+  /* Reduz o tamanho geral do conteúdo para 50% mantendo alinhado */
+  transform: scale(0.5);
+  /* transform-origin: top center; */
+}
+
+/* Título principal */
+.logo-main {
+  font-size: 200px;
+  font-weight: 400;
+  background-color: #075819; /* verde musgo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+/* Subtítulo abaixo do título */
+.logo-subtitle {
+  font-size: 50px;
+  color: #181717;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+/* Se tiver imagem no logo-header, controla o tamanho */
+.logo-header img {
+  height: 200px; /* Ajuste conforme preferir */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}

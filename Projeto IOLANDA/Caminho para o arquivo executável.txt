@@ -1,0 +1,9 @@
+Para encontrar o executável da nossa aplicação, basta acessar o seguinte caminho:
+
+C:\Users\Laura\OneDrive\Área de Trabalho\Projeto IOLANDA\projeto-iolanda (versão 1.0)\IOLANDA
+
+Dentro da pasta IOLANDA existem outras três pastas:
+
+- for_redistribution (caso queira instalar o IOLANDA em sua máquina)
+- for_redistribution_files_only (executável portátil)
+- for_testing (versão para testes locais durante o desenvolvimento)

@@ -1,0 +1,18 @@
+Arquivos do IOLANDA (versão 2.9):
+
+- tela_login.mlapp
+	- cadastrar_usuario.mlapp
+- main_menu.mlapp
+	- programas.mlapp
+	- observatorios_cadastrados.mlapp
+	- contato.mlapp
+- programas.mlapp
+	- conversao_dados.mlapp
+		|-> usa a função formatarArquivo.m
+		|-> usa a função corrigirHorariosFaltantes.m
+	- parametros_omni.mlapp
+	- media_desvio.mlapp
+		|-> usa a função processa_arquivos.m
+		|-> usa a janela resultados.mlapp (para plotar os gráficos)
+	- plotar_graficos.m
+		|-> usa a função fecharGraficos.m (fecha a janela dos gráficos e abre automaticamente a janela de programas de novo)

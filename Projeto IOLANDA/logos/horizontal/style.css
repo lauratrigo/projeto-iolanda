@@ -1,0 +1,53 @@
+/* Corpo da página: centraliza conteúdo vertical e horizontal */
+body {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Alice", serif;
+}
+
+/* Container geral do logo e textos */
+.logo-container {
+  text-align: center;
+  max-width: 90%;
+  transform: scale(0.5);
+  /* Ajuste o origin se quiser */
+  transform-origin: top center;
+}
+
+/* Container do logo e texto do título em linha */
+.logo-header {
+  display: flex;
+  align-items: center;    /* Alinha verticalmente imagem e texto */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-bottom: 20px;
+}
+
+/* Imagem do logo ao lado do título */
+.logo-header img {
+  height: 200px;  /* Ajuste o tamanho que quiser */
+  width: auto;
+  margin-right: 20px; /* Espaço entre imagem e texto */
+}
+
+/* Título principal */
+.logo-main {
+  font-size: 200px;
+  font-weight: 400;
+  background-color: #075819; /* verde musgo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  margin: 0; /* Remove margem pra ficar alinhado certinho */
+}
+
+/* Subtítulo abaixo do título */
+.logo-subtitle {
+  font-size: 50px;
+  color: #181717;
+  line-height: 1.4;
+  margin-top: 0;
+}

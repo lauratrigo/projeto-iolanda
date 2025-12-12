@@ -1,0 +1,50 @@
+body {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Alice", serif;
+}
+
+.logo-container {
+  text-align: center;
+  max-width: 90%;
+  transform-origin: top center;
+}
+
+.logo-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  height: 400px;       /* Tamanho da imagem */
+  width: auto;
+  margin-bottom: 20px;
+}
+
+/* Este é o segredo: limitar o texto à largura da imagem */
+.logo-main {
+  display: inline-block;
+  font-size: 90px;
+  font-weight: 400;
+  background-color: #075819;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+
+  /* Use isso para ajustar o tamanho até a largura bater */
+  max-width: 100%;       Limita a crescer além da imagem
+}
+
+/* Novo ajuste para sincronizar a largura do texto com a imagem */
+.logo-header {
+  width: fit-content;
+}
