@@ -23,7 +23,7 @@ Assista ao vídeo demonstrativo do sistema no YouTube:
 ---
 
 <p align="center">
-  <img src="Projeto IOLANDA/logos/logo-readme.png" alt="IOLANDA Logo" width="120"/>
+  <img src="Projeto IOLANDA/logos/logo-readme.png" alt="IOLANDA Logo" width="500"/>
 </p>
 
 **Figura:** Logo do sistema IOLANDA, representando sua função de integração e centralização de dados ionosféricos de forma intuitiva e confiável.
