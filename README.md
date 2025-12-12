@@ -1,4 +1,4 @@
-# 🌌 IOLANDA - Ionospheric Observation, Logging, Analysis and Data Application
+# 📡 IOLANDA - Ionospheric Observation, Logging, Analysis and Data Application
 
 O **IOLANDA** é um sistema integrado para gerenciamento, processamento e análise de dados ionosféricos, voltado para laboratórios de física espacial e pesquisadores da área. Ele unifica tarefas que atualmente dependem de múltiplas ferramentas (UDIDA, Python, MATLAB), oferecendo um fluxo de trabalho centralizado e eficiente. O sistema é compatível com dados de ionossondas do tipo **CADI**.
 
@@ -6,7 +6,11 @@ O **IOLANDA** é um sistema integrado para gerenciamento, processamento e análi
 
 ## 🎥 Vídeo de Funcionamento
 Assista ao vídeo demonstrativo do sistema no YouTube:  
-[![IOLANDA Demo](https://img.youtube.com/vi/MzIX_Qi7GUo/0.jpg)](https://youtu.be/MzIX_Qi7GUo)
+<p align="center">
+  <a href="https://youtu.be/MzIX_Qi7GUo">
+    <img src="https://img.youtube.com/vi/MzIX_Qi7GUo/0.jpg" alt="IOLANDA Demo" width="480"/>
+  </a>
+</p>
 
 ---
 
