@@ -1,0 +1,14 @@
+  FORMAT OF THE SUBSETTED FILE
+    
+    ITEMS                      FORMAT   
+     
+ 1 Year                          I4        
+ 2 Day                           I4        
+ 3 Hour                          I3        
+ 4 Minute                        I3        
+ 5 BZ, nT (GSM)                  F8.2      
+ 6 Speed, km/s                   F8.1      
+ 7 Proton Density, n/cc          F7.2      
+ 8 Electric field, mV/m          F7.2      
+ 9 AE-index, nT                  I6        
+10 SYM/H, nT                     I6        
